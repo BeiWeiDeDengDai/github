@@ -3,7 +3,7 @@ import csv
 
 
 ########################################  reader ##################################
-file = "../dataparse/doubanTop250.csv"
+file = "../dataparse/re/doubanTop250.csv"
 # 使用 reader 方式进行读取   utf-8-sig
 with open(file, mode='r', encoding="utf-8") as f:
     reader = csv.reader(f)
