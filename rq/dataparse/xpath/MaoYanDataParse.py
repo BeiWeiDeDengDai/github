@@ -3,21 +3,22 @@ import csv
 import requests
 from lxml import etree
 
+# 加入ag, cookie 否则无法正常获取内容
 headers = {
     "Cookie": "_lxsdk_cuid=182eda46939c8-0dfdc4b4d8a0a2-1b565635-13c680-182eda4693ac8; _lxsdk=182eda46939c8-0dfdc4b4d8a0a2-1b565635-13c680-182eda4693ac8; _lx_utm=utm_source%3Dgoogle%26utm_medium%3Dorganic; _lxsdk_s=182ee5cd0b1-6e3-3f6-f24%7C%7C1",
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",
 
 }
 
-
+# 代理设置
 proxy ={
     "http":"http://216.250.156.85:80"
 }
+# csv表头
 csvHeaders=["rank","name","time","price","avg_price","cc"]
 # 解析数据并写入
 def date_parsee_and_write(data):
     html = etree.HTML(data)
-
     dict={}
     dict['name']=html.xpath('//ul/li/p[@class="first-line"]/text()')
     dict['time']=html.xpath('//ul/li/p[@class="second-line"]/text()')
