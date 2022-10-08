@@ -35,7 +35,7 @@ browser.refresh()
 time.sleep(5)
 
 browser.delete_all_cookies() # 删除所有的cookies
-browser.close()
+
 
 
 

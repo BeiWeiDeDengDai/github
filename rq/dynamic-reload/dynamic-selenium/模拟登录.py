@@ -15,11 +15,10 @@ submit = browser.find_element_by_xpath('//button[@type="submit"]') # 获取 登�
 # 节点交互
 input_name.send_keys('孙旭')
 
-time.sleep(2)
+
 input_name.clear() # 清空
 input_name.send_keys('zhangyinghao') # 输入用户名
-time.sleep(2)
-time.sleep(2)
+
 input_ps.send_keys('zyhbwddd210')  # 输入密码
 submit.click() # 按钮点击
 time.sleep(10)
