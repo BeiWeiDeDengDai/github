@@ -24,7 +24,7 @@ def get_product_info():
             'comment': item.find('.p-commit').find('a').text(),
             'shop': item.find('.curr-shop').attr('title')
         }
-        if (item.find('.p-price').text() != ''):
+        if item.find('.p-price').text() != '':
             # print(item)
             print(mobile_info)
 
